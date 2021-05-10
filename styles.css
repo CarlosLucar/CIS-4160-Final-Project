@@ -1,0 +1,205 @@
+/* feel free to use this page to style, or link your own stylesheet
+
+You can start at the next comment   */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav{
+    height: 44px;
+    background: #000;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.menu{
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.menu ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul li{
+    list-style: none;
+}
+
+.menu ul li, .menu ul li a{
+    color: #fff;
+    line-height: 44px;
+    text-decoration: none;
+}
+
+.menu ul li .fab.fa-apple{
+    font-size: 20px;
+}
+
+.menu ul li a.menu-item{
+    transform: scale(1);
+    transition: 0.5s;
+    display: block;
+}
+
+.menu ul li a.menu-item.hide-item{
+    transform: scale(0);
+}
+
+.menu ul li:nth-child(2) a.menu-item.hide-item{
+    transition-delay: 0.6s;
+}
+.menu ul li:nth-child(3) a.menu-item.hide-item{
+    transition-delay: 0.5s;
+}
+.menu ul li:nth-child(4) a.menu-item.hide-item{
+    transition-delay: 0.4s;
+}
+.menu ul li:nth-child(5) a.menu-item.hide-item{
+    transition-delay: 0.3s;
+}
+.menu ul li:nth-child(6) a.menu-item.hide-item{
+    transition-delay: 0.2s;
+}
+.menu ul li:nth-child(7) a.menu-item.hide-item{
+    transition-delay: 0.1s;
+}
+.menu ul li:nth-child(8) a.menu-item.hide-item{
+    transition-delay: 0.0s;
+}
+
+
+
+
+.menu ul li:nth-child(2) a.menu-item{
+    transition-delay: 0s;
+}
+.menu ul li:nth-child(3) a.menu-item{
+    transition-delay: 0.1s;
+}
+.menu ul li:nth-child(4) a.menu-item{
+    transition-delay: 0.2s;
+}
+.menu ul li:nth-child(5) a.menu-item{
+    transition-delay: 0.3s;
+}
+.menu ul li:nth-child(6) a.menu-item{
+    transition-delay: 0.4s;
+}
+.menu ul li:nth-child(7) a.menu-item{
+    transition-delay: 0.5s;
+}
+.menu ul li:nth-child(8) a.menu-item{
+    transition-delay: 0.6s;
+}
+
+
+.search-form{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-30%);
+    width: 600px;
+    height: 44px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.search-form.active{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s ;
+} 
+
+.search-form input{
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form input::placeholder{
+    color: #fff;
+}
+
+.search-form::before{
+    font-family: 'Font Awesome\ 5 Free';
+    content: '\f002';
+    position: absolute;
+    top: 12px;
+    left: -26px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 510;
+}
+
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 44px;
+    background: #000;
+    color: #fff;
+    line-height: 44px;
+    font-size: 18px;
+    text-align: right;
+    width: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.close.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.shadow{
+    position: fixed;
+    z-index: 10;
+    top: 43px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color:rgba(0,0,0,.8);
+    visibility: hidden;
+    z-index: 9;
+
+}
+.shadow.active{
+    visibility: visible;
+}
+
+.item-container{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    position: absolute;
+    left: 13%;
+}
+
+.item-box{
+    padding-bottom: 20px;
+    padding-right: 140px;
+    display: inline-block;
+}
+
+/*  You can begin here */
+
+
+
+
