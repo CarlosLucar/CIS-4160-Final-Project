@@ -35,7 +35,7 @@ include 'dbh.php';
 
             <ul>
                 <li><a href="index.php"><i class="fab fa-apple"></i></a></li>
-                <li> <a href="#" class="menu-item">Mac</a></li>
+                <li> <a href="mac.php" class="menu-item">Mac</a></li>
                 <li> <a href="#" class="menu-item">iPad</a></li>
                 <li> <a href="#" class="menu-item">iPhone</a></li>
                 <li> <a href="#" class="menu-item">Watch</a></li>

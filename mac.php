@@ -79,31 +79,7 @@ include 'dbh.php';
     <!-- main body section -->
     <main>
 
-        <!--  Can be deleted for home page layout, starting from here  -->
-        <div class="item-container">
-            <?php
-             
-                $sql = "SELECT * FROM itemstable";
-                $result = mysqli_query($conn, $sql);
-                $queryResults = mysqli_num_rows($result);
 
-                if($queryResults > 0){
-                    while($row = mysqli_fetch_assoc($result)){
-                        echo "<div class=item-box style='text-align:center;'>
-                            <h3> <img src=images/".$row['Image']."> </h3>
-                            <h3>".$row['Name']." </h3>
-                            <h3>".$row['Color']." </h3>
-                            <h3>".$row['Memory']." </h3>
-                            <h3>".$row['Display']." </h3>
-                            <h3>".$row['Price']." </h3>          
-                        </div>";
-                    }
-                }
-            
-            ?>
-
-        </div>
-                <!--  To here  -->
 
 
 
