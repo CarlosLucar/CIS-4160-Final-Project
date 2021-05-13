@@ -20,7 +20,6 @@ include 'dbh.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     
     <!-- link to CSS file -->
-    <link href="styles.css" rel="stylesheet">
 
     <!-- link to external library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -28,6 +27,8 @@ include 'dbh.php';
     <!-- link for jquery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 
+
+    <link href="styles.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <!-- page title -->
     <title>Apple: Home </title>
   </head>
@@ -78,35 +79,42 @@ include 'dbh.php';
 
     <!-- main body section -->
     <main>
+    <div class='content'>
 
-        <!--  Can be deleted for home page layout, starting from here  -->
-        <div class="item-container">
-            <?php
-             
-                $sql = "SELECT * FROM itemstable";
-                $result = mysqli_query($conn, $sql);
-                $queryResults = mysqli_num_rows($result);
+        <div id='notice'>
+            <a href='#'>Shop online</a> and get Specialist help, free no-contact delivery, and more.
+        </div>
 
-                if($queryResults > 0){
-                    while($row = mysqli_fetch_assoc($result)){
-                        echo "<div class=item-box style='text-align:center;'>
-                            <h3> <img src=images/".$row['Image']."> </h3>
-                            <h3>".$row['Name']." </h3>
-                            <h3>".$row['Color']." </h3>
-                            <h3>".$row['Memory']." </h3>
-                            <h3>".$row['Display']." </h3>
-                            <h3>".$row['Price']." </h3>          
-                        </div>";
-                    }
-                }
-            
-            ?>
+        <div id='ipadpro' class='spread'>
+            <p class='title'>iPad Pro</p>
+            <p class='subtitle'>Supercharged by the Apple M1 chip.</p>
+            <p class='caption'>Available second half of May</p>
+            <a href='#' class='homelink'>Learn more ></a>
+            <a href='#' class='homelink'>Order ></a>
+            <br/><img id="ipadpropic" src='images/ipadpro.jpeg' onDragStart='return false' onContextMenu='return false'/>
+        </div>
+
+        <div id='iphone12' class='spread'>
+            <p class='title'>iPhone 12</p>
+            <p class='subtitle'>Purple. Now in season.</p>
+            <p class='caption'>From $29.13/mon. for mo. or $699 before trade-in<br/>Buy directly from Apple with special carrier offers</p>
+            <a href='#' class='homelink'>Learn more ></a>
+            <a href='#' class='homelink'>Buy ></a>
+            <br/><img src='images/iPhone12.png' onDragStart='return false' onContextMenu='return false'/>
+        </div>
+
+        <div id='imac' class='spread'>
+            <p class='title'>iMac</p>
+            <p class='subtitle'>Say hello.</p>
+            <p class='caption'>Available second half of May</p>
+            <a href='#' class='homelink'>Learn more ></a>
+            <a href='#' class='homelink'>Order ></a>
+            <br/><img src='images/iMac.png' onDragStart='return false' onContextMenu='return false'/>
+        </div>
+
+
 
         </div>
-                <!--  To here  -->
-
-
-
     </main>
 
     <!-- main body section ending -->

@@ -4,9 +4,12 @@ You can start at the next comment   */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 body{
+    width:100%;
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Helvetica';
+    font-size: 10.5pt;
+    text-align:center;
 }
 
 nav{
@@ -198,8 +201,92 @@ nav{
     display: inline-block;
 }
 
+
 /*  You can begin here */
 
+.content{
+    position: relative;
+    top: 40px;
+}
+#notice, #notice a{
+    background-color: #f5f5f7;
+    line-height: 44px;
+    text-decoration: none;
+}
 
+#notice a {
+    color:#0066cc;
+}
 
+#ipadpro{
+    background-color:black;
+    color:white;
+    margin:0px;
+}
 
+#ipadpro a, #ipadpro a:hover{
+    color:#2997ff;
+}
+
+#ipadpro a:hover{
+    text-decoration: underline;
+}
+
+#iphone12{
+    background-color:#efe5fe;
+}
+#imac{
+    background-color:#fafafa;
+}
+
+.spread{
+    /*height:691px;*/
+
+    margin: 12px 0px;
+    overflow-x: hidden;
+
+}
+
+.spread .title {
+    line-height:50px;
+    padding-top: 55px;
+    padding-bottom: 0px;
+    margin: 0px;
+    font-size: 50px;
+    font-weight: bold;
+    /*transform: scaleY(1.075)*/
+}
+
+.spread .subtitle{
+    font-size: 27px;
+}
+
+.spread .caption{
+    font-size: 17px;
+    color: grey;
+}
+
+.spread .homelink{
+    font-size: 20px;
+    padding: 0px 15px;
+    text-decoration:none;
+    color:#0066cc;
+}
+
+.spread .homelink:hover, #notice a:hover{
+    text-decoration: underline;
+    color:#0066cc;
+}
+
+.spread img{
+    width:100%;
+    max-width: 1106px;
+    min-width: 1000px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+#ipadpropic{
+    position: relative;
+    top: 00px;
+}

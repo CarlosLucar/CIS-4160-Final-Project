@@ -84,7 +84,8 @@ include 'dbh.php';
                             <h3>".$row['Color']." </h3>
                             <h3>".$row['Memory']." </h3>
                             <h3>".$row['Display']." </h3>
-                            <h3>".$row['Price']." </h3>          
+                            <h3>".$row['Price']." </h3> 
+                            <a class='add-cart".$row['id']."' href='#'> Add Cart</a>         
                         </div>";
                 }
             } else{
