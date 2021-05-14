@@ -20,7 +20,7 @@ include 'dbh.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     
     <!-- link to CSS file -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="styles.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <!-- link to external library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -42,7 +42,7 @@ include 'dbh.php';
 
             <ul>
                 <li><a href="index.php"><i class="fab fa-apple"></i></a></li>
-                <li> <a href="mac.php" class="menu-item">Mac</a></li>
+                <li> <a href="#" class="menu-item">Mac</a></li>
                 <li> <a href="#" class="menu-item">iPad</a></li>
                 <li> <a href="#" class="menu-item">iPhone</a></li>
                 <li> <a href="#" class="menu-item">Watch</a></li>
@@ -50,7 +50,7 @@ include 'dbh.php';
                 <li> <a href="#" class="menu-item">Music</a></li>
                 <li> <a href="#" class="menu-item">Support</a></li>
                 <li> <a href="#" id="search"><i class="fas fa-search"></i></a></li>
-                <li> <a href="#" ><i class="fas fa-shopping-bag"></i></a></li> 
+                <li class="cart"> <a name="basket" href="cart.php" ><i class="fas fa-shopping-bag"></i><spam>0</spam></a></li>
 
 
             </ul>
@@ -78,9 +78,46 @@ include 'dbh.php';
 
     <!-- main body section -->
     <main>
+        <div class="content">
+        <?php
+             
+             $sql = "SELECT * FROM itemstable";
+             $result = mysqli_query($conn, $sql);
+             $queryResults = mysqli_num_rows($result);
 
+             if($queryResults > 0){
+                 while($row = mysqli_fetch_assoc($result)){
+                     echo "
+                     <div class='card item-box-items' style='width: 18rem; display:inline-grid;'>
+                     <img src=images/".$row['Image']." class='card-img-top' alt=''>
+                     <div class='card-body'>
+                       <h3 class='card-title'>".$row['Name']."</h3>
+                       <h3 class='card-title'>".$row['Color']."</h3>
+                       <h3 class='card-title'>".$row['Memory']."</h3>
+                       <h3 class='card-title'>".$row['Display']."</h3>
+                       <h3 class='card-title'>".$row['Price']."</h3>
+                       
+                       <a class='add-cart ".$row['id']."' href='#/'> Add Cart</a>
+                     </div>
+                   </div>";
+                     
+                     
+                        /*
+                        <div class=item-box-items style='display:inline-grid;'>
+                         <h3> <img id='itemimg' src=images/".$row['Image']."> </h3>
+                         <h3>".$row['Name']." </h3>
+                         <h3>".$row['Color']." </h3>
+                         <h3>".$row['Memory']." </h3>
+                         <h3>".$row['Display']." </h3>
+                         <h3>".$row['Price']." </h3>     
+                         <a class='add-cart ".$row['id']."' href='#/'> Add Cart</a>        
+                     </div>";*/
+                 }
+             }
+         
+         ?>
 
-
+            </div>
 
 
     </main>
@@ -133,6 +170,8 @@ include 'dbh.php';
 
 
         <!-- to here  -->
+
+        <script src="main.js"></script>
 
     </body>
 </html>

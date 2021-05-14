@@ -17,7 +17,8 @@ include 'dbh.php';
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
+    
+    <link href="styles.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -43,7 +44,7 @@ include 'dbh.php';
                 <li> <a href="#" class="menu-item">Music</a></li>
                 <li> <a href="#" class="menu-item">Support</a></li>
                 <li> <a href="#" id="search"><i class="fas fa-search"></i></a></li>
-                <li> <a href="#" ><i class="fas fa-shopping-bag"></i></a></li>
+                <li class="cart"> <a name="basket" href="cart.php" ><i class="fas fa-shopping-bag"></i><spam>0</spam></a></li>
 
 
             </ul>
@@ -78,14 +79,12 @@ include 'dbh.php';
 
             if($queryResult > 0){
                 while($row = mysqli_fetch_assoc($result)){
-                    echo "<div class=item-box style='text-align:center;'>
-                            <h3> <img src=images/".$row['Image']."> </h3>
-                            <h3>".$row['Name']." </h3>
-                            <h3>".$row['Color']." </h3>
-                            <h3>".$row['Memory']." </h3>
-                            <h3>".$row['Display']." </h3>
-                            <h3>".$row['Price']." </h3> 
-                            <a class='add-cart".$row['id']."' href='#'> Add Cart</a>         
+                    echo "<div class=item-box'>
+                            <h3> <img class='searchimg' src=images/".$row['Image']."> </h3>
+                            <h3 class='pname'>".$row['Name']." </h3>
+                            <p> iPhone 12 Pro. 5G. A14 Bionic. Ceramic Shield. LiDAR Scanner. 
+                            Advanced Pro camera system. And 4K HDR recording with Dolby Vision.</p>
+                            <a class='buy ".$row['id']."' href='items.php'> Buy </a> <hr>        
                         </div>";
                 }
             } else{
@@ -126,8 +125,7 @@ include 'dbh.php';
             
             </script>
 
-
-
+<script src="main.js"></script>
         
 </body>
 </html>

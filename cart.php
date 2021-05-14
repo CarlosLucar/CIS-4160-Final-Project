@@ -51,7 +51,7 @@ include 'dbh.php';
                 <li> <a href="#" class="menu-item">Music</a></li>
                 <li> <a href="#" class="menu-item">Support</a></li>
                 <li> <a href="#" id="search"><i class="fas fa-search"></i></a></li>
-                <li class="cart"> <a name="basket" href="cart.php" ><i class="fas fa-shopping-bag"></i>0</a></li>
+                <li class="cart"> <a name="basket" href="#" ><i class="fas fa-shopping-bag"></i><spam>0</spam></a></li>
 
 
 
@@ -80,42 +80,20 @@ include 'dbh.php';
 
     <!-- main body section -->
     <main>
-    <div class='content icontent'>
-
-        <div id='notice'>
-            <a href='#'>Shop online</a> and get Specialist help, free no-contact delivery, and more.
+    <div class="content">
+        <div class="products-container">
+            <div class="product-header">
+            
+            <h5 class="product-title"> PRODUCT </h5>
+            <h5 class="price"> PRICE </h5>
+            <h5 class="quantity"> QUANTITY </h5>
+            <h5 class="total"> TOTAL </h5>
+            </div>
+            <div class="products"></div>
+        
         </div>
+</div>
 
-        <div id='ipadpro' class='spread'>
-            <p class='title'>iPad Pro</p>
-            <p class='subtitle'>Supercharged by the Apple M1 chip.</p>
-            <p class='caption'>Available second half of May</p>
-            <a href='#' class='homelink'>Learn more ></a>
-            <a href='#' class='homelink'>Order ></a>
-            <br/><img id="ipadpropic" src='images/iPadPro.jpeg' onDragStart='return false' onContextMenu='return false'/>
-        </div>
-
-        <div id='iphone12' class='spread'>
-            <p class='title'>iPhone 12</p>
-            <p class='subtitle'>Purple. Now in season.</p>
-            <p class='caption'>From $29.13/mon. for mo. or $699 before trade-in<br/>Buy directly from Apple with special carrier offers</p>
-            <a href='#' class='homelink'>Learn more ></a>
-            <a href='#' class='homelink'>Buy ></a>
-            <br/><img src='images/iPhone12.jpeg' onDragStart='return false' onContextMenu='return false'/>
-        </div>
-
-        <div id='imac' class='spread'>
-            <p class='title'>iMac</p>
-            <p class='subtitle'>Say hello.</p>
-            <p class='caption'>Available second half of May</p>
-            <a href='#' class='homelink'>Learn more ></a>
-            <a href='#' class='homelink'>Order ></a>
-            <br/><img src='images/iMac.jpeg' onDragStart='return false' onContextMenu='return false'/>
-        </div>
-
-
-
-        </div>
     </main>
 
     <!-- main body section ending -->

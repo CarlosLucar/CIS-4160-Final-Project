@@ -9,7 +9,6 @@ body{
     padding: 0;
     font-family: 'Helvetica';
     font-size: 10.5pt;
-    text-align:center;
 }
 
 nav{
@@ -194,16 +193,29 @@ nav{
     position: absolute;
     left: 13%;
 }
+.searchimg{
+    width: 100px;
+}
 
 .item-box{
     padding-bottom: 20px;
     padding-right: 140px;
-    display: inline-block;
+    display: inline;
 }
 
+.item-box-items{
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+}
+
+.card{
+    margin-right: 0;
+}
 
 /*  You can begin here */
-
+.icontent{
+    text-align: center;
+}
 .content{
     position: relative;
     top: 40px;
@@ -289,4 +301,84 @@ nav{
 #ipadpropic{
     position: relative;
     top: 00px;
+}
+
+#itemimg{
+    width: 150px;
+}
+
+/* CART PAGE */
+
+.products-container{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.products-container i{
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+.product-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+}
+
+.product-title{
+    width: 45%;
+}
+
+.price{
+    width: 15%;
+
+    display: flex;
+    align-items: center;
+}
+
+.quantity{
+    width: 30%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.total{
+    width: 10%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+
+}
+
+.product{
+    width: 45%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.products{
+    width: 100%;
+    position: relative;
+    left: 27%;
+}
+
+.products img{
+    width: 75px;
+}
+span{
+    margin-right: 35%;
+    max-width: 500px;
 }
